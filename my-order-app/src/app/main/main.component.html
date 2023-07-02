@@ -1,0 +1,22 @@
+
+  <div>
+    <!-- <div>
+      <span>Cart ({{ getCartItemCount() }})</span>
+      <button (click)="clearCart()">Clear Cart</button>
+    </div> -->
+   
+  <div class="mainDiv"> 
+    <mat-tab-group (selectedTabChange)="selectedMenuChange($event)">
+    <mat-tab *ngFor="let item of menus" [label]="item.name!"> 
+      <img mat-card-image [src]="'assets/'+item.name+'.jpg'" alt="{{ item.name }}">
+   <!-- <mat-card-subtitle>{{item.description}}</mat-card-subtitle>-->
+        </mat-tab>
+      </mat-tab-group>
+  </div>
+  </div>
+  <div class="listItems">
+    <mat-list *ngFor="let item of menuItems">
+
+        <app-menu-item [item]="item"></app-menu-item>
+    </mat-list>
+  </div>

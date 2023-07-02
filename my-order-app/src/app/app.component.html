@@ -1,0 +1,22 @@
+<div class="mainAppDiv">
+  <mat-toolbar color="primary">
+
+    <h1>My Angular Restaurant</h1>
+    <span class="example-spacer"></span>
+    <div style="display: flex; justify-content: right;">
+      <a routerLink="/"> <button mat-raised-button class="primary">
+        <mat-icon>menu</mat-icon>
+       Menu
+    </button></a>
+    </div>
+    <span class="example-spacer1"></span>
+    <div>
+    <a routerLink="/cart">   <button mat-raised-button class="primary">
+      <mat-icon>shopping_cart</mat-icon>
+     Cart
+    </button></a>
+    </div>  
+  </mat-toolbar>
+  
+  <router-outlet></router-outlet>
+</div>

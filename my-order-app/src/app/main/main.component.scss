@@ -1,0 +1,27 @@
+.mainDiv{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainItemDiv{
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+.listItems{
+    
+  align-content: center;
+    text-align: center;
+    display: block;
+    margin-left: 390px;
+    width: 800px;
+   
+   
+   
+}
+.mat-card-image{
+  width: 650px;
+  height: 250px;
+  align-content: center;
+}

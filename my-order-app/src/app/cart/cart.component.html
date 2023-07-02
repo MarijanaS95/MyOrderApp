@@ -1,0 +1,48 @@
+
+<div class="ItemsCard">
+    <mat-card *ngFor="let item of items" class="cartItem" style="width: 500px; display: flex; flex-direction: row; justify-content: center;">
+       <mat-card-content>
+        <mat-card-title >{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+        <div style="display: inline-flex;justify-content: space-between;align-items: center;"> {{item.price}} <span class="material-icons blue-color"> attach_money</span></div>
+        </mat-card-content>
+        
+
+        <div class="removeButtonDiv"> 
+            <button (click)="removeItem(item)" mat-fab color="raised">
+                <mat-icon>delete</mat-icon>
+              </button>
+        </div>
+    </mat-card>
+  
+  </div>
+
+    <div *ngIf="items.length>0" style="display: flex;margin-right: 20px; width: 40vw;justify-content:center;align-content: center;">
+        <mat-card>Total price: <div style="display: inline-flex;justify-content: space-between;align-items: center;"> {{getCartItemsPrice()}} <span class="material-icons blue-color"> attach_money</span></div></mat-card>
+        <button  (click)="clearCart()" mat-fab color="primary" aria-label="Example icon button with a delete icon"><mat-icon>delete</mat-icon></button>
+    </div>
+
+   
+  
+      <div *ngIf="items.length>0">
+        <form class= "example-form" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+            <div class='formContainer'> 
+              <!-- <label for="name">Name (required):</label> -->
+              <input  matInput placeholder="Name"  type="text" id="name" formControlName="name" />
+                   <!-- <mat-label for="address">Address (required):</mat-label>-->
+                    <input matInput placeholder="Address" type="text" id="address" formControlName="address" />
+                   <!--  <mat-label for="phone">Phone (required):</mat-label> -->
+                    <input  matInput placeholder="Phone"  type="text" id="phone" formControlName="phone" />
+                   <!--  <label for="note">Note:</label> -->
+            
+                    <!--<textarea  placeholder="Note" formControlName="note" style="resize: none;" rows="4"></textarea> -->
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Leave a comment</mat-label>
+                      <textarea  matInput placeholder="Leave a comment" style="resize: none; width: 99%; height: 100px;"  formControlName="note"></textarea>
+                    </mat-form-field>
+                <div class="submitButton"><button [disabled]="!this.customerForm.valid" mat-raised-button color="primary" type="submit">Submit Order</button></div>
+        </div>
+      
+      </form>
+    </div>
