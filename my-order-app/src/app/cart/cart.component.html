@@ -1,0 +1,45 @@
+
+<div class="ItemsCard">
+  <mat-card *ngFor="let item of items" class="cartItem" style="width: 500px; display: flex; flex-direction: row; justify-content: center;">
+    
+    <mat-card-content>
+      <mat-card-title >{{item.name}}</mat-card-title>
+      <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+      <div style="display: inline-flex;justify-content: space-between;align-items: center;"> {{item.price}} <span class="material-icons blue-color"> attach_money</span></div>
+    </mat-card-content>
+        
+
+    <div class="removeButtonDiv"> 
+      <button (click)="removeItem(item)" mat-fab color="raised">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-card>
+  
+</div>
+
+<div *ngIf="items.length>0" style="display: flex;margin-right: 20px; width: 40vw;justify-content:center;align-content: center;">
+  <mat-card>Total price: <div style="display: inline-flex;justify-content: space-between;align-items: center;"> {{getCartItemsPrice()}} <span class="material-icons blue-color"> attach_money</span></div></mat-card>
+  <button  (click)="clearCart()" mat-fab color="primary" aria-label="Example icon button with a delete icon"><mat-icon>delete</mat-icon></button>
+</div>
+
+   
+ <!--Angular direktiva *ngIf za uslovno prikazivanje HTML elementa;
+  items.length > 0 proverava da li postoji barem jedna stavka (item) u nizu items;
+  Ako je uslov ispunjen (tj. ako niz nije prazan), onda će se prikazati sadržaj unutar ovog <div> elementa.--> 
+
+<div *ngIf="items.length>0">
+  <form class= "example-form" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <div class='formContainer'> 
+      <!-- [formGroup]="customerForm" povezuje formular sa Angular Reactive Forms grupom (customerForm).-->
+      <!-- (ngSubmit)="onSubmit()" definise Angular događaj koji će se aktivirati kada se forma pošalje (submit). Povezuje se sa metodnom onSubmit()-->
+        <input matInput placeholder="Name"  class="custom-input" type="text" id="name" formControlName="name" />     
+        <input matInput placeholder="Address"  class="custom-input" type="text" id="address" formControlName="address" />         
+        <input matInput placeholder="Phone"  class="custom-input" type="text" id="phone" formControlName="phone" />        
+        <textarea matInput placeholder="Leave a comment" class="custom-input" type="textarea"  formControlName="note"></textarea>
+        <div class="submitButton"><button [disabled]="!this.customerForm.valid" mat-raised-button color="primary" type="submit">Submit Order</button></div>
+    <!--type="submit" postavlja tip dugmeta kao "submit", što znači da će aktivirati događaj ngSubmit kada se pritisne.-->
+    <!--[disabled]="!this.customerForm.valid" postavlja da dugme bude onemogućeno (disabled) ako forma nije validna.-->
+    </div>
+  </form>
+</div>

@@ -1,0 +1,76 @@
+.cartItem
+{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    flex-direction: column;
+    
+}
+.nameRemoveDiv
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;  
+    width:600px;
+    height: 800px;
+    padding-top: 50px;
+}
+  .removeButtonDiv
+  {
+    display: flex;
+    align-items: center;
+
+  }
+  .submitButton{
+    margin-top: 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mat-card-content{
+    padding:5px ;
+    text-align: center;
+  }
+
+  .mat-card-title{
+    text-align: center;
+    font-size: larger; 
+  }
+
+.mat-card{
+  margin-right: 10px;
+  text-align: center;
+}
+
+.ItemsCard{
+  display:grid;
+  text-align:center;
+  justify-content: center;
+}
+.example-form{
+  display:grid;
+  text-align:center;
+  justify-content: center;
+}
+
+
+.custom-input {
+  border: 2px solid #aaa; /* Set the border width and color */
+  border-radius: 4px; /* Add rounded corners */
+  padding: 8px 12px; /* Adjust padding as desired */
+  transition: border-color 0.3s ease-in-out; /* Add transition effect for smooth animation */
+  margin-top: 3px;
+  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;}
+
+.custom-input:focus {
+  border-color: #0069D9; /* Change border color when the input is focused */
+  outline: none; /* Remove the default outline */
+}

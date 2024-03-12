@@ -1,0 +1,61 @@
+.textName{
+    color: rgba(35, 31, 52, 0.963) ;
+    text-align: center;
+}
+
+.textPrice{
+    color: rgba(35, 31, 52, 0.963) ;
+    text-align:center;
+}
+
+.textButton{
+  text-decoration-color: rgba(35, 31, 52, 0.963) ;
+  display: block;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+        
+    
+} 
+
+.mat-card-header{
+  background-color:rgba(0, 0, 255, 0.795) ;
+  padding:5px ;
+}
+      
+.mat-card{
+  padding:0 ;
+  max-width: 50%;
+  display: grid; 
+  align-content: center; 
+  justify-content: center;
+}
+      
+.mat-card-content{
+  padding:5px ;
+
+}
+
+.mat-card-title{
+  text-align: center;
+  font-size: larger; 
+}
+
+.mat-card-subtitle{
+  text-align: center;
+}
+
+.mat-mini-fab{
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.mat-tab-group{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.mat-list{
+  align-items: center;
+}

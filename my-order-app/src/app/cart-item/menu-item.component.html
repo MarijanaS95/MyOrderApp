@@ -1,0 +1,22 @@
+
+<!--Implementacija kartice proizvoda-->
+    <mat-card>
+        <!-- Sadržaj kartice -->
+        <!-- Vezivanje stringa-->
+            <mat-card-content>
+                <mat-card-title >{{item.name}}</mat-card-title>
+                <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+            </mat-card-content>
+            <!-- Cena sa ikonom valute -->
+            <mat-card-title><div style="display: inline-flex;align-items: center;"> {{item.price}} <span class="material-icons blue-color"> attach_money</span></div></mat-card-title>
+            <!-- Dugme za dodavanje proizvoda u korpu -->
+            <mat-card-actions align="end">
+                <button  mat-mini-fab color="basic" (click)="addItemToCart(item)"><span class="material-icons"> add_shopping_cart </span></button>
+            </mat-card-actions>  
+             <!-- Podnožje kartice -->
+            <mat-card-footer></mat-card-footer>
+    </mat-card>
+
+    <!--Vezivanje događaja 
+         Funkcionalnost se postiže povezivanjem događaja klika s funkcijom addItemToCart 
+         i prosleđivanjem trenutnog proizvoda  item kao argumenta ovoj funkciji. -->

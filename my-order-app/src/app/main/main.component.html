@@ -1,0 +1,22 @@
+
+<div>
+  
+  <div class="mainDiv"> 
+    <mat-tab-group (selectedTabChange)="selectedMenuChange($event)">
+
+      <mat-tab *ngFor="let item of menus" [label]="item.name!"> 
+      <img mat-card-image [src]="'assets/'+item.name+'.jpg'" alt="{{ item.name }}">
+      </mat-tab>
+
+    </mat-tab-group>
+  </div>
+
+</div>
+
+<div class="listItems">
+  
+  <mat-list *ngFor="let item of menuItems">
+  <app-menu-item [item]="item"></app-menu-item>
+  </mat-list> 
+
+</div>

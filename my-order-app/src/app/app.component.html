@@ -1,0 +1,29 @@
+<div class="mainAppDiv">
+  <mat-toolbar color="primary">
+    <h1>My Angular Restaurant</h1>
+
+    <span class="example-spacer"></span>
+    <!-- dugme koje predstavlja link ka početnoj stranici ("/") -->
+    <div style="display: flex; justify-content: right;">
+      <a routerLink="/"> <button mat-raised-button class="primary">
+        <mat-icon>menu</mat-icon>
+         Menu
+      </button></a>
+    </div>
+
+    <span class="example-spacer1"></span>
+
+    <div> <!--dugme koje predstavlja link ka stranici korpe -->
+    <a routerLink="/cart"> <button mat-raised-button class="primary"> 
+      <mat-icon>shopping_cart</mat-icon>
+       Cart
+      </button></a>
+    </div>  
+
+  </mat-toolbar>
+
+  
+  <router-outlet></router-outlet>
+   <!-- mesto gde će se dinamički prikazivati komponente u zavisnosti od trenutne RUTE.
+        router-outlet je deo Angular rutiranja i koristi se za dinamičko učitavanje komponenti. -->
+</div>
